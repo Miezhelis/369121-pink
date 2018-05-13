@@ -1,0 +1,39 @@
+.slider-pagination {
+  position: absolute;
+  z-index: 11;
+  font-size: 0;
+  text-align: center;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.slider-pagination--price {
+  display: block;
+  bottom: -50px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.slider-pagination__control {
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: content-box;
+  width: 6px;
+  height: 6px;
+  margin-right: 20px;
+  background: rgba(40, 54, 69, 0.3);
+  border-radius: 50%;
+  user-select: none;
+}
+
+.slider-pagination__control--active {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px #283645;
+}

@@ -1,0 +1,107 @@
+.gallery {
+  text-align: center;
+  background-color: #ffffff;
+
+  .gallery__list-wrapper {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include container;
+    }
+  }
+
+  .gallery__item:not(.gallery__item--special) {
+    @include container;
+
+    @media (min-width: $tablet-width) {
+      width: 300px;
+      padding: 0;
+    }
+  }
+
+  .gallery__item:nth-child(odd) {
+    @media (min-width: $tablet-width) {
+      margin-right: 0;
+    }
+  }
+
+  .gallery__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .gallery__item:nth-last-child(-n+2) {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  .gallery__list-wrapper > .gallery__item {
+    @media (min-width: $desktop-width) {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+  .gallery__list-wrapper > .gallery__item:nth-child(3n) {
+    @media (min-width: $desktop-width) {
+      margin-right: 0;
+    }
+  }
+
+  .gallery__list-wrapper > .gallery__item:not(:nth-last-child(-n+3)) {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 55px;
+    }
+  }
+
+  .gallery__list-wrapper > .gallery__item:nth-last-child(-n+3) {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  .gallery__picture {
+    display: block;
+    width: 100%;
+  }
+
+  .gallery__picture-wrapper--special {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery__special-wrapper {
+    @include container;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 48px;
+    }
+  }
+
+  .gallery__picture--special img {
+    width: 100%;
+    vertical-align: top;
+
+    @media (min-width: $tablet-width) {
+      height: 507px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 505px;
+    }
+  }
+
+  .gallery__img {
+    vertical-align: top;
+    max-height: 405px;
+    width: 100%;
+  }
+}

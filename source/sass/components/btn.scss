@@ -1,0 +1,138 @@
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  padding: 13px 40px;
+  text-decoration: none;
+  border-radius: 30px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  &--download {
+    border: 3px solid #ffffff;
+    margin-bottom: 35px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 45px;
+      padding: 13px 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 70px;
+      font-weight: 600;
+    }
+  }
+
+  &--green {
+    background-color: #2aab6d;
+    text-transform: uppercase;
+    line-height: 30px;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 40px;
+    padding: 15px 50px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+      padding: 16px 60px;
+    }
+  }
+
+  &--green-popup{
+    width: 100%;
+  }
+
+  &--like {
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: none;
+    background-position: center;
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  &--post {
+    width: 280px;
+    color: $theme-red-color;
+    font-weight: bold;
+    border: 3px solid $theme-red-color;
+    border-radius: 30px;
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 25px;
+      width: 265px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 185px;
+      margin-bottom: 0;
+    }
+  }
+
+  &--cancel {
+    width: 280px;
+    color: #dddfe0;
+    font-weight: bold;
+    border: 3px solid #dddfe0;
+    margin-bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 265px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 185px;
+    }
+  }
+}
+
+//btn--download
+.btn--download:hover {
+  background-color: #ffffff;
+  color: $theme-red-color;
+}
+
+.btn--download:active {
+  background-color: #ffffff;
+  color: rgba(210, 40, 86, 0.3);
+}
+
+//btn--post
+.btn--post:hover {
+  background-color: $theme-red-color;
+  color: #ffffff;
+}
+
+.btn--post:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+//btn--cancel
+.btn--cancel:hover {
+  border:3px solid #b5b9be;
+  color: #b5b9be;
+}
+
+.btn--cancel:active {
+  background-color: #b5b9be;
+  color: #ffffff;
+}
+
+//btn--green
+.btn--green:hover {
+  background-color: #1c9b5e;
+}
+
+.btn--green:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.btn--green:disabled {
+  background-color: #e5e5e5;
+}

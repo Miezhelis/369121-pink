@@ -1,0 +1,122 @@
+.contacts {
+  background-color: #ffffff;
+  padding: 25px 0;
+  text-align: center;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 45px;
+  }
+
+  .contacts__container {
+    @include container;
+  }
+
+  .contacts__heading {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #283645;
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 40px;
+      line-height: 48px;
+      max-width: 410px;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 50px;
+      line-height: 1.2;
+      max-width: 625px;
+      margin-bottom: 35px;
+    }
+  }
+
+  .contacts__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .contacts__item {
+      @media (min-width: $tablet-width) {
+        max-width: 220px;
+      }
+    }
+
+    .contacts__item:nth-child(3) {
+      @media (min-width: $desktop-width) {
+        order: 2;
+      }
+    }
+
+    .contacts__item:nth-child(2) {
+      @media (min-width: $desktop-width) {
+        order: 3;
+      }
+    }
+
+    .contacts__item:not(:last-child) {
+      margin-bottom: 2px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .contacts__title {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .contacts__text {
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    color: $theme-red-color;
+    margin: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -70px;
+    z-index: 10;
+    width: 100%;
+    height: 70px;
+    background-image: linear-gradient(to top right, transparent 50%, #ffffff 50%), linear-gradient(to top left, transparent 50%, #ffffff 50%);
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 0;
+    background-size: 50.1% 100%;
+  }
+}
+
+.contacts__text:hover {
+  color: #283645;
+}
+
+.contacts__text:active {
+  color: #283645;
+  opacity: 0.3;
+}
