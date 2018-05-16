@@ -1,0 +1,34 @@
+.range-indent{
+  width: 100%;
+}
+
+.range-indent__range-controls {
+  position: relative;
+  margin: 8px 0;
+  padding: 0 40px;
+}
+
+.range-indent__bar {
+  width: 100%;
+  height: 2px;
+  background: #000;
+}
+
+.range-indent__range-bubble {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0,1,1,.2);
+  box-shadow: 0 2px 1px 0 rgba(0,1,1,.2);
+  cursor: pointer;
+  position: absolute;
+  top: -7px;
+  left: 25%;
+}
+
+.range-indent__range-bubble:hover {
+  background: $theme-red-color;
+}
+

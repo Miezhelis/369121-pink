@@ -45,10 +45,6 @@
 
 .form__section:first-child {
   padding-top: 0;
-
-  @media (min-width: $desktop-width) {
-    padding-top: 20px;
-  }
 }
 
 .form__section:nth-child(2n) {
@@ -89,7 +85,10 @@
   @media (min-width: $tablet-width) {
     order: -1;
   }
+}
 
+.form__control {
+  font-family: inherit;
 }
 
 .form__label {
@@ -138,6 +137,7 @@
 }
 
 .form__label--contacts {
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column-reverse;
@@ -175,6 +175,7 @@
   border: none;
   padding: 0;
   margin: 0;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     border: 2px solid #ececec;
@@ -337,7 +338,7 @@ legend.form__caption:last-child {
   align-items: flex-start;
 
   @media (min-width: $desktop-width) {
-    max-height: 215px;
+    height: 215px;
     flex-wrap: wrap;
   }
 }
@@ -369,6 +370,7 @@ legend.form__caption:last-child {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 320px;
 }
 
 .form__textarea {
@@ -510,12 +512,37 @@ legend.form__caption:last-child {
 
 .form__control:hover,
 .form__checkbox-button:hover,
-.form__radio-button:hover{
+.form__radio-button:hover {
   border: 2px solid #283645;
 }
 
 .form__control:active,
 .form__checkbox-button:active,
-.form__radio-button:active{
+.form__radio-button:active {
   border: 2px solid $theme-red-color;
+}
+
+.form__legend {
+  position: absolute;
+  top: -11px;
+  right: 0;
+  left: 0;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.form__legend--contacts {
+  max-width: 272px;
+}
+
+.form__legend--apps {
+  max-width: 350px;
+}
+
+.form__legend--features {
+  max-width: 440px;
+}
+
+.form__legend--textarea {
+  max-width: 250px;
 }

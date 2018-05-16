@@ -6,11 +6,11 @@
   background-size: 320px 400px;
   flex-direction: column;
   justify-content: flex-end;
-  height: 670px;
+  min-height: 670px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row-reverse;
-    height: 620px;
+    min-height: 620px;
     background-size: cover;
     align-items: flex-end;
   }
