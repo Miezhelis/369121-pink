@@ -85,10 +85,10 @@ gulp.task("clean", function () {
 });
 
 gulp.task("build", function (callback) {
-   runSequence('clean', [
-     'copy',
-     'style',
-     'sprite',
-     'html',
-   ], callback);
+  runSequence('clean', [
+    'copy',
+    'style',
+    'sprite',
+    'html',
+  ], callback);
 });

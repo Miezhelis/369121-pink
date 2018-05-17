@@ -4,6 +4,7 @@
 
 .range-indent--tablet {
   display: none;
+
   @media (min-width: $tablet-width) {
     display: block;
   }
@@ -24,10 +25,9 @@
 .range-indent__range-bubble {
   width: 15px;
   height: 15px;
-  background: #fff;
+  background: #ffffff;
   border: 2px solid #d22856;
   border-radius: 50%;
-  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
   position: absolute;
@@ -46,4 +46,3 @@
 .range-indent__range-bubble:hover {
   background: $theme-red-color;
 }
-
