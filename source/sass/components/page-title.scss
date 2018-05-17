@@ -24,6 +24,12 @@
     padding: 0;
   }
 
+  .page-title__container--photo {
+    @media (min-width: $desktop-width) {
+      max-width: 500px;
+    }
+  }
+
   .page-title__heading {
     margin: 0;
     font-size: 24px;

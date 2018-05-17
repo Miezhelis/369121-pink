@@ -29,17 +29,17 @@
   color: #283645;
   background-color: #ffffff;
   padding-top: 35px;
-  padding-bottom: 40px;
+  padding-bottom: 44px;
 
   @media (min-width: $tablet-width) {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 33px;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
     padding-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 }
 
@@ -61,7 +61,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -78,12 +78,18 @@
     flex-direction: column;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 40px;
   }
 }
 
 .form__section--info {
   @media (min-width: $tablet-width) {
     order: -1;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
   }
 }
 
@@ -109,7 +115,7 @@
 }
 
 .form__label:not(:last-child) {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
@@ -137,12 +143,30 @@
 }
 
 .form__label--contacts {
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
     margin-bottom: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      height: 58px;
+      width: 58px;
+      background-color: #f2f2f2;
+    }
+
+    &::after {
+      content: url('../img/phone.svg');
+      position: absolute;
+      top: 17px;
+      right: 15px;
+      height: 30px;
+      width: 30px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -154,11 +178,21 @@
 .form__label--contacts:last-child {
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+
+    &::after {
+      content: url('../img/mail.svg');
+      position: absolute;
+      top: 17px;
+      right: 15px;
+      height: 30px;
+      width: 30px;
+    }
   }
 }
 
 .form__label--app {
-  padding-left: 50px;
+  padding-left: 70px;
+
 }
 
 .form__list {
@@ -188,17 +222,17 @@
 
 .form__fieldset--more {
   @media (min-width: $tablet-width) {
-    padding: 30px 60px 40px;
+    padding: 45px 60px 40px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 35px 55px;
+    padding: 40px 55px;
   }
 }
 
 .form__fieldset--app {
   @media (min-width: $tablet-width) {
-    padding: 40px 40px 60px 50px;
+    padding: 60px 40px 60px 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -208,21 +242,31 @@
 
 .form__fieldset--contacts {
   @media (min-width: $tablet-width) {
-    padding: 40px 60px 30px 60px;
+    padding: 52px 60px 30px 60px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 35px 60px 15px 60px;
+    padding: 40px 60px 15px 60px;
+  }
+}
+
+.form__section--achievements {
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
   }
 }
 
 .form__fieldset--achievements {
   @media (min-width: $tablet-width) {
-    padding: 45px 60px 50px 60px;
+    padding: 55px 60px 50px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 35px 60px 15px 60px;
+    padding: 55px 60px 0 60px;
   }
 }
 
@@ -276,14 +320,6 @@ legend.form__caption:last-child {
   margin-left: 20px;
 }
 
-.user-platform__item {
-  margin-bottom: 45px;
-}
-
-.user-platform__item:last-child {
-  margin-bottom: 0;
-}
-
 .form__label-wrapper {
   display: flex;
   flex-direction: column;
@@ -315,13 +351,13 @@ legend.form__caption:last-child {
   &--intro {
     @media (min-width: $tablet-width) {
       margin-left: 20px;
+      padding-left: 20px;
     }
   }
 
   &--contacts {
     @media (min-width: $tablet-width) {
       padding: 14px;
-      border-right: 60px solid #e5e5e5;
       margin-bottom: 8px;
     }
 
@@ -338,7 +374,7 @@ legend.form__caption:last-child {
   align-items: flex-start;
 
   @media (min-width: $desktop-width) {
-    height: 215px;
+    height: 172px;
     flex-wrap: wrap;
   }
 }
@@ -370,7 +406,10 @@ legend.form__caption:last-child {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 320px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 320px;
+  }
 }
 
 .form__textarea {
@@ -520,15 +559,19 @@ legend.form__caption:last-child {
 .form__checkbox-button:active,
 .form__radio-button:active {
   border: 2px solid $theme-red-color;
+  outline: none;
 }
 
 .form__legend {
-  position: absolute;
-  top: -11px;
-  right: 0;
-  left: 0;
-  background-color: #ffffff;
-  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    background-color: #ffffff;
+    position: absolute;
+    top: -11px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
 }
 
 .form__legend--contacts {
@@ -543,6 +586,7 @@ legend.form__caption:last-child {
   max-width: 440px;
 }
 
-.form__legend--textarea {
+legend.form__legend--textarea {
+  margin-bottom: 17px;
   max-width: 250px;
 }

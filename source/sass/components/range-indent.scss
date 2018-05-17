@@ -1,5 +1,12 @@
-.range-indent{
+.range-indent {
   width: 100%;
+}
+
+.range-indent--tablet {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .range-indent__range-controls {
@@ -11,7 +18,7 @@
 .range-indent__bar {
   width: 100%;
   height: 2px;
-  background: #000;
+  background: #000000;
 }
 
 .range-indent__range-bubble {
@@ -20,12 +27,20 @@
   background: #fff;
   border: 2px solid #d22856;
   border-radius: 50%;
-  -webkit-box-shadow: 0 2px 1px 0 rgba(0,1,1,.2);
-  box-shadow: 0 2px 1px 0 rgba(0,1,1,.2);
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
   position: absolute;
   top: -7px;
   left: 25%;
+}
+
+.range-indent__range-bubble--tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .range-indent__range-bubble:hover {

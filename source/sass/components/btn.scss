@@ -16,12 +16,13 @@
 
     @media (min-width: $tablet-width) {
       margin-bottom: 45px;
-      padding: 13px 45px;
+      padding: 13px 53px;
     }
 
     @media (min-width: $desktop-width) {
       margin-bottom: 70px;
       font-weight: 600;
+      padding: 13px 45px;
     }
   }
 

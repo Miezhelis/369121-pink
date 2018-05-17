@@ -7,6 +7,10 @@
   left: 0;
   right: 0;
 
+  @media (min-width: $tablet-width) {
+    bottom: 15px;
+  }
+
   @media (min-width: $desktop-width) {
     display: none;
   }
@@ -36,4 +40,13 @@
 .slider-pagination__control--active {
   background-color: #ffffff;
   box-shadow: 0 0 0 3px #283645;
+}
+
+.slider-pagination__control:hover {
+  background-color: #7e868f;
+}
+
+.slider-pagination__control:active {
+  background-color: #7e868f;
+  opacity: 0.3;
 }

@@ -4,28 +4,13 @@
   @include container;
   margin-bottom: 15px;
   color: #283645;
-  min-height: 170px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px;
-
-  @media (min-width: $tablet-width) {
-    min-height: 230px;
-    padding-top: 0;
-    margin-bottom: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: 240px;
-  }
+  display: block;
 
   .call-to-action__text {
     font-size: inherit;
     line-height: 30px;
     font-weight: 400;
-    margin: 0;
+    margin: 0 auto;
 
     @media (min-width: $tablet-width) {
       font-size: 18px;
@@ -49,26 +34,46 @@
 }
 
 .call-to-action--form {
+  padding: 43px 20px 25px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 50px;
-    padding-bottom: 10px;
+    padding-top: 93px;
+    padding-bottom: 50px;
     margin-bottom: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 0;
+    padding-top: 93px;
+    padding-bottom: 60px;
+  }
+}
+
+.call-to-action--photo {
+  padding-top: 43px;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 90px;
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 }
 
 .call-to-action--bottom {
-  min-height: 160px;
+  padding-top: 43px;
+  padding-bottom: 27px;
 
   @media (min-width: $tablet-width) {
-    min-height: 195px;
+    padding-top: 60px;
+    padding-bottom: 73px;
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 182px;
+    padding-top: 60px;
+    padding-bottom: 65px;
   }
 }
