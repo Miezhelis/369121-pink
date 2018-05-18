@@ -105,3 +105,29 @@
     width: 100%;
   }
 }
+
+.gallery__item--special {
+  position: relative;
+}
+
+.gallery__flag-wrapper {
+  @include container;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  text-align: right;
+  padding-top: 3%;
+}
+
+.gallery__flag {
+  font-family: inherit;
+  padding: 7px 23px 6px;
+  right: 0;
+  top: 0;
+  font-size: 12px;
+  line-height: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: $theme-red-color;
+}

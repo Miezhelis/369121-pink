@@ -2,12 +2,12 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  border: 2px solid #bec2c7;
-  transform: rotate(45deg);
   cursor: pointer;
   z-index: 3;
   display: none;
   top: 49%;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   @media (min-width: $desktop-width) {
     display: block;
@@ -15,13 +15,11 @@
 }
 
 .slider-toggle__item--left {
-  border-top: none;
-  border-right: none;
+  background-image: url("../img/arrow-left.svg");
   left: 26%;
 }
 
 .slider-toggle__item--right {
-  border-bottom: none;
-  border-left: none;
+  background-image: url("../img/arrow-right.svg");
   right: 26%;
 }
